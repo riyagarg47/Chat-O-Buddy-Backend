@@ -113,7 +113,7 @@ let signUpFunction = (req, res) => {
                             }
                         })
                         let fullName = `${newUser.firstName} ${newUser.lastName}`
-                        mailer.autoEmail(newUser.email, `Hello <b>${fullName}</b><br><br>Welcome to Chat-O-Buddy.<br>You can now connect to your friends and create groups with your favourite ones.<br><br> For any Query, drop us a mail at- chatobuddy@gmail.com<br><br>Regards<br>Chat-O-Buddy`);
+                        mailer.autoEmail(newUser.email, `Hello <b>${fullName}</b><br><br>Welcome to Chat-O-Buddy.<br>You can now find new buddies and connect to them. Hope you have a great experience with us.<br><br> For any Query, drop us a mail at- chatobuddy@gmail.com<br><br>Regards<br>Chat-O-Buddy`);
                     } else {
                         logger.error('User Cannot Be Created.User Already Present', 'userController: createUser', 4)
                         let apiResponse = response.generate(true, 'User Already Present With this Email', 403, null)
