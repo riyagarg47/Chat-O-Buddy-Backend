@@ -160,7 +160,7 @@ let sendResetLink = (req, res) => {
             }
             else {
                 logger.info("user found", "userController: findUser()", 10);
-            mailer.autoEmail(req.params.userEmail, `Hello <b>${userDetails.firstName}</b>!!<br><br>Welcome to Chat-O-Buddy.<br>You can reset your password by<a href='http://localhost:4200/resetPassword/${userDetails.userId}'>clicking here</a> .<br><br>For any Query, drop us a mail at- chatobuddy@gmail.com<br><br>Regards<br>Chat-O-Buddy `);
+            mailer.autoEmail(req.params.userEmail, `Hello <b>${userDetails.firstName}</b>!!<br><br>Welcome to Chat-O-Buddy.<br>You can reset your password by<a href='http://chatobuddy.in/resetPassword/${userDetails.userId}'>clicking here</a> .<br><br>For any Query, drop us a mail at- chatobuddy@gmail.com<br><br>Regards<br>Chat-O-Buddy `);
                 let apiResponse = response.generate(false, "User Details Found", 200, "Mail sent successfully");
                 res.send(apiResponse); 
             }
